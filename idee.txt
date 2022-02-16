@@ -1,0 +1,12 @@
+Man hat verschiedene checkboxen und klickt
+das an, was für einen zutrifft.
+
+Nach dem klicken (Weiter Button) wird
+verglichen, auf den diese Antwort zutrifft
+und der counter der person erhöht.
+
+am schluss wird verglichen, welcher 
+counter am höchsten ist.
+
+Im Falle eines Gleichstandes werden mehrere
+charactere zurückgegeben.

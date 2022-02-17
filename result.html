@@ -6,30 +6,35 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="./index.js"></script>
+    <link rel="stylesheet" href="./resultStyle.css">
     <title>Questions</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Poppins:wght@900&display=swap" rel="stylesheet">
 </head>
 
 <body>
     <h1>WHICH MAIN CHARACTER ARE YOU?</h1>
     <content>
-        <h2>What is your favorite color?</h2>
-        <form>
-            <input type="radio" id="answer1" value="black" name="answer">
-            <label for="answer1">black</label><br>
-            <input type="radio" id="answer2" value="yellow" name="answer">
-            <label for="answer2">yellow</label><br>
-            <input type="radio" id="answer3" value="red" name="answer">
-            <label for="answer3">red</label><br>
-            <input type="radio" id="answer4" value="blue" name="answer">
-            <label for="answer4">blue</label><br>
-            <input type="radio" id="answer5" value="green" name="answer">
-            <label for="answer5">green</label><br>
-            <input type="radio" id="answer6" value="white" name="answer">
-            <label for="answer6">white</label><br>
-        </form>
+        <h2>WHAT IS YOUR FAVORITE COLOR?</h2>
+        <div id="formDiv">
+            <form>
+                <input type="radio" id="answer1" value="black" name="answer">
+                <label for="answer1">black</label><br>
+                <input type="radio" id="answer2" value="yellow" name="answer">
+                <label for="answer2">yellow</label><br>
+                <input type="radio" id="answer3" value="red" name="answer">
+                <label for="answer3">red</label><br>
+                <input type="radio" id="answer4" value="blue" name="answer">
+                <label for="answer4">blue</label><br>
+                <input type="radio" id="answer5" value="green" name="answer">
+                <label for="answer5">green</label><br>
+                <input type="radio" id="answer6" value="white" name="answer">
+                <label for="answer6">white</label><br>
+            </form>
+        </div>
         <button onclick="nextQuestion()">next</button>
     </content>
-
 </body>
 
 </html>

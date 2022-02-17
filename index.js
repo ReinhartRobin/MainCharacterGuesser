@@ -25,6 +25,33 @@ var questions = [
         'What is a cigarette?',
         'Of course not, do you know how harmful that is?',
         'I`ve never done it. Let me try...'
+    ],
+    [
+        'Which job would you pick?',
+        'Entrepreneur',
+        'Manager',
+        'Programmer',
+        'Soldier',
+        'Scientist',
+        'Non of them'
+    ],
+    [
+        'What is your favorite food?',
+        'I have no time to eat...',
+        'Candy, definitely!',
+        'I don`t know',
+        'Meat',
+        'I usually order the food and have it brought to me',
+        'I eat what`s available'
+    ],
+    [
+        'What is your favorite school subject?',
+        'I don`t care',
+        'All Subjects are great',
+        'Computer Science',
+        'PE',
+        'Physics',
+        'I don`t have a favorite subject'
     ]
 ];
 
@@ -32,9 +59,18 @@ var resultCharacters = [
     'Thomas Shelby',
     'Michael Scott',
     'Elliot Alderson',
-    'Ragnar Lodbrock',
+    'Ragnar Lothbrok',
     'Sheldon Cooper',
     'Clay Jensen'
+]
+
+var images = [
+    './images/thomasShelby.jpg',
+    './images/michaelScott.jpg',
+    './images/elliotAlderson.jpg',
+    './images/ragnarLothbrok.jpg',
+    './images/sheldonCooper.jpg',
+    './images/clayJensen.jpg'
 ]
 
 var resultCounts = [
@@ -62,6 +98,8 @@ function nextQuestion() {
     }
     document.querySelector('content').innerHTML = `
     <h2>` + questions[qCount][0] + `</h2>
+    <div id="formDiv">
+    <form>
         <input type="radio" id="answer1" value="` + questions[qCount][1] + `" name="answer">
         <label for="answer1">` + questions[qCount][1] + `</label><br>
         <input type="radio" id="answer2" value="` + questions[qCount][2] + `" name="answer">
@@ -74,12 +112,12 @@ function nextQuestion() {
         <label for="answer5">` + questions[qCount][5] + `</label><br>
         <input type="radio" id="answer6" value="` + questions[qCount][6] + `" name="answer">
         <label for="answer6">` + questions[qCount][6] + `</label><br>
+        </form>
+        </div>
         <button onclick="nextQuestion()">next</button>
     `;
     qCount++;
 }
-
-
 
 function check() {
     if (document.querySelector('#answer1').checked) {
@@ -94,25 +132,35 @@ function check() {
         resultCounts[4]++;
     } else if (document.querySelector('#answer6').checked) {
         resultCounts[5]++;
+    } else {
+        qCount--;
+        alert("You have to tick one!");
     }
-    console.log(resultCounts);
 }
 
 function pickWinner() {
-
     findWinner();
 
     let winnerText = ``;
     switch (winnerCount) {
         case 1:
-            winnerText = `<h2>You are: ` + resultCharacters[winnerPositions[0]] + `</h2>`;
+            winnerText = `
+            <img src="` + images[winnerPositions[0]] + `">
+            <h2>You are: ` + resultCharacters[winnerPositions[0]] + `</h2>`;
             break;
         case 2:
-            winnerText = `<h2>You are 50%: ` + resultCharacters[winnerPositions[0]] + ` and 50%: ` +
-                resultCharacters[winnerPosition[1]] + `</h2>`;
+            winnerText = `
+            <img src="` + images[winnerPositions[0]] + `">
+            <img src="` + images[winnerPositions[1]] + `">
+            <h2>You are 50%: ` + resultCharacters[winnerPositions[0]] + ` and 50%: ` +
+                resultCharacters[winnerPositions[1]] + `</h2>`;
             break;
         case 3:
-            winnerText = `<h2>You are 33%: ` + resultCharacters[winnerPositions[0]] + ` , 33%: ` +
+            winnerText = `
+            <img src="` + images[winnerPositions[0]] + `">
+            <img src="` + images[winnerPositions[1]] + `">
+            <img src="` + images[winnerPositions[2]] + `">
+            <h2>You are 33%: ` + resultCharacters[winnerPositions[0]] + ` , 33%: ` +
                 resultCharacters[winnerPositions[1]] + ` and 33%: ` + resultCharacters[winnerPositions[2]] + `</h2>`;
             break;
         default:

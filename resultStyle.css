@@ -21,11 +21,15 @@ content {
 h1 {
     color: #FEFFFF;
     font-family: 'Poppins', sans-serif;
+    margin: 0 auto;
+    position: relative;
+    top: 20vh;
 }
 
 h2 {
     color: #17252A;
     font-family: 'Montserrat', sans-serif;
+    margin-bottom: 2vh;
 }
 
 button {
@@ -38,6 +42,32 @@ button {
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
-    margin: 5% auto;
+    margin: 3vh auto;
     cursor: pointer;
+}
+
+form {
+    text-align: left;
+}
+
+#formDiv {
+    display: flex;
+    justify-content: center;
+}
+
+form input {
+    text-align: center;
+    margin-top: 1vh;
+}
+
+form label {
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+}
+
+img {
+    width: 25%;
+    height: auto;
+    margin-bottom: 2vh;
 }

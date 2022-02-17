@@ -62,18 +62,18 @@ function nextQuestion() {
     }
     document.querySelector('content').innerHTML = `
     <h2>` + questions[qCount][0] + `</h2>
-        <input type="checkbox" id="answer1" value="answer1" name="answer1">
-        <label for="question1">` + questions[qCount][1] + `</label><br>
-        <input type="checkbox" id="answer2" value="answer2" name="answer2">
-        <label for="question2">` + questions[qCount][2] + `</label><br>
-        <input type="checkbox" id="answer3" value="answer3" name="answer3">
-        <label for="question3">` + questions[qCount][3] + `</label><br>
-        <input type="checkbox" id="answer4" value="answer4" name="answer4">
-        <label for="question4">` + questions[qCount][4] + `</label><br>
-        <input type="checkbox" id="answer5" value="answer5" name="answer5">
-        <label for="question5">` + questions[qCount][5] + `</label><br>
-        <input type="checkbox" id="answer6" value="answer6" name="answer6">
-        <label for="question6">` + questions[qCount][6] + `</label><br>
+        <input type="radio" id="answer1" value="` + questions[qCount][1] + `" name="answer">
+        <label for="answer1">` + questions[qCount][1] + `</label><br>
+        <input type="radio" id="answer2" value="` + questions[qCount][2] + `" name="answer">
+        <label for="answer2">` + questions[qCount][2] + `</label><br>
+        <input type="radio" id="answer3" value="` + questions[qCount][3] + `" name="answer">
+        <label for="answer3">` + questions[qCount][3] + `</label><br>
+        <input type="radio" id="answer4" value="` + questions[qCount][4] + `" name="answer">
+        <label for="answer4">` + questions[qCount][4] + `</label><br>
+        <input type="radio" id="answer5" value="` + questions[qCount][5] + `" name="answer">
+        <label for="answer5">` + questions[qCount][5] + `</label><br>
+        <input type="radio" id="answer6" value="` + questions[qCount][6] + `" name="answer">
+        <label for="answer6">` + questions[qCount][6] + `</label><br>
         <button onclick="nextQuestion()">next</button>
     `;
     qCount++;
